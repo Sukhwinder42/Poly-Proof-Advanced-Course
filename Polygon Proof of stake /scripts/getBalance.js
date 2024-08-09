@@ -1,7 +1,7 @@
 const hre = require("hardhat");
 const tokenContractJSON = require("../artifacts/contracts/Smart.sol/Smart.json");
 
-const tokenAddress = "0x21e7Dfd012A1e5EE42a1D93057059CF7D6EaD32D"; // Ethereum address of the deployed ERC721A contract
+const tokenAddress = "0x2a9bD091A3487B60ee8048D445e67e83069f4742"; // Ethereum address of the deployed ERC721A contract
 const tokenABI = tokenContractJSON.abi;
 const walletAddress = "0x83449CDCEAF704691993a3E3A33fd9aeEFc11AA7"; // Ethereum public address for the wallet
 
