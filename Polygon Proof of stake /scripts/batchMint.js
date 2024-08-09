@@ -1,4 +1,3 @@
-// This script batch mints ERC721A tokens.
 const { ethers } = require("hardhat");
 require("dotenv").config();
 
@@ -6,8 +5,8 @@ async function main() {
   // Get private key from environment variables
   const privateKey = "4f61b2f401414b7177d635aefb8797e08f0305477c5762b10e9941071b9bd5ea";
 
-  // The URL of the Goerli test network 
-  const networkAddress ="https://eth-sepolia.g.alchemy.com/v2/CWVzzYQKQb6nSdgnGFFPX0LOuMJyQUpe";
+  // The URL of the Sepolia test network 
+  const networkAddress = "https://sepolia.infura.io/v3/dc827978ead8420a91edda4943f30b25";
 
   // connect to the Ethereum network
   const provider = new ethers.providers.JsonRpcProvider(networkAddress);
@@ -16,13 +15,11 @@ async function main() {
   const signer = new ethers.Wallet(privateKey, provider);
 
   // The address of the deployed contract 
-  const contractAddress = "0x9851e304EdC35Aeb8a2D5179B9D4522B879bFaF9";
+  const contractAddress = "0x65b922Eeb62b1A8Fb89C072e4c859E3FE28f06E4";
 
-  // Get the contract factory for the Ignis contract and attach it to the signer
   const OneNFT = await ethers.getContractFactory("Smart", signer);
   const contract = await OneNFT.attach(contractAddress);
 
-  // Call the mint function to mint 5 tokens
   await contract.mint(5);
 
   console.log("Successfully minted '5' NFT.");
