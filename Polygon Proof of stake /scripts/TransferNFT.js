@@ -2,7 +2,7 @@ const hre = require("hardhat");
 const fxRootContractABI = require("../fxRootContractABI.json");
 const tokenContractJSON = require("../artifacts/contracts/Smart.sol/Smart.json");
 
-const tokenAddress = "0x9851e304EdC35Aeb8a2D5179B9D4522B879bFaF9";
+const tokenAddress = "0x65b922Eeb62b1A8Fb89C072e4c859E3FE28f06E4";
 const tokenABI = tokenContractJSON.abi;
 const FxERC721RootTunnel = "0x9E688939Cb5d484e401933D850207D6750852053";
 const walletAddress = "0x83449CDCEAF704691993a3E3A33fd9aeEFc11AA7";
